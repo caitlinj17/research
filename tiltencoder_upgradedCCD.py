@@ -34,8 +34,11 @@ print
 #The numbers output by the following lines are essentially the first wavelength that will be on the edge of the CCD.
 print "For the 600/7500 grating:"
 print "These should be equivalent and equal to ~5500 for the d55 dichroic, or ~4650 for the d46:"
-print lambda1-pixel1*1.3 #1.30 Angstroms/pixel for the 600/7500 grating
-print lambda2-pixel2*1.3 #1.30 Angstroms/pixel for the 600/7500 grating
+print lambda1 + (pixel1-3399)*1.3
+print lambda2 + (pixel2-3399)*1.3
+#The pixel read out got swapped, so that it begins at pixel 3399 and decreases. The 2 lines below are no longer relevant.
+#print lambda1-pixel1*1.3 #1.30 Angstroms/pixel for the 600/7500 grating
+#print lambda2-pixel2*1.3 #1.30 Angstroms/pixel for the 600/7500 grating
 
 print "For the 600/7500 grating:"
 print "This is the wavelength edge:"
@@ -44,10 +47,10 @@ detectorsize = 4096 #This is the number of pixels across the detector in the dim
 print lambda1+(detectorsize-pixel1)*1.30 #1.30 Angstroms/pixel for the 600/7500 grating
 print lambda2+(detectorsize-pixel2)*1.30 #1.30 Angstroms/pixel for the 600/7500 grating
 
-
-print "For the 1200/5000 grating:"
-print "These should be equivalent and equal to ~5500 for the d55 dichroic, or ~4650 for the d46:"
-print lambda1-pixel1*0.65 #0.65 Angstroms/pixel for the 1200/5000 grating
-print lambda2-pixel2*0.65 #0.65 Angstroms/pixel for the 1200/5000 grating
+####Out of date and no longer used:
+#print "For the 1200/5000 grating:"
+#print "These should be equivalent and equal to ~5500 for the d55 dichroic, or ~4650 for the d46:"
+#print lambda1-pixel1*0.65 #0.65 Angstroms/pixel for the 1200/5000 grating
+#print lambda2-pixel2*0.65 #0.65 Angstroms/pixel for the 1200/5000 grating
 
 
